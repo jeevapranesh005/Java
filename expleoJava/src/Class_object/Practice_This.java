@@ -30,7 +30,7 @@ public class Practice_This {
 	}
 	void sendhr() {
 		Hrdept hr = new Hrdept();
-		hr.processEmployee(this);
+		hr.processEmployee(thi);
 	}
 	
 	Practice_This updatesal(double hikper) {
