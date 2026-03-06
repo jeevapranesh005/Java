@@ -8,7 +8,7 @@ public class decisionmaking3 {
 		
 		if(ismoving) {
 			currentspeed--;
-			System.out.println("cycle speed is got reduce");
+			System.out.println("cycle speed is become low);
 			
 		}
 		else {
