@@ -1,5 +1,7 @@
 package demo_pack;
 
 public class hello {
-fxdfcghf
+	public static void main(String[] args) {
+		
+	}
 }
