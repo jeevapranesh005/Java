@@ -1,6 +1,7 @@
-package demo_pack;
+package ecommence;
+
 import java.util.Scanner;
-public class hello {
+public class demo {
 	public static void main(String[] args) {
 		Scanner x = new Scanner(System.in);
 		System.out.println("ENter the name:");
@@ -8,3 +9,4 @@ public class hello {
 		System.out.println("HII "+name+" welcome to e-commerce shop");
 		}
 }
+
