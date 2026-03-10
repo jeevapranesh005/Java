@@ -6,7 +6,7 @@ public class demo {
 		Scanner x = new Scanner(System.in);
 		System.out.println("ENter the name:");
 		String name = x.nextLine();
-		System.out.println("HII "+name+" welcome to  shop");
+		System.out.println("HII "+name+" welcome to bar shop");
 		}
 }
 
