@@ -21,7 +21,7 @@ public class upperBound {
 		System.out.println("sum is "+sum);
 		List <Float> in1 = new ArrayList<>();
 		in1.add(3.2f);
-		in1.add(5.3f);
+		in1.add(5.1f);
 		in1.add(3.4f);
 		double sum1=sum(in1);
 		System.out.println("sum is "+sum1);
