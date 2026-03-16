@@ -1,7 +1,7 @@
 package Files;
 // READ THE FILE 
 import java.io.FileInputStream;
-
+//
 public class FileInoutStream {
 
 	public static void main(String[] args) {
