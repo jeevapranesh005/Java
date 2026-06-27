@@ -80,6 +80,7 @@
           <tags>persp.editorOnboardingCommand:Show Key Assist$$$Ctrl+Shift+L</tags>
           <tags>persp.editorOnboardingCommand:New$$$Ctrl+N</tags>
           <tags>persp.editorOnboardingCommand:Open Type$$$Ctrl+Shift+T</tags>
+          <tags>persp.editorOnboardingCommand:Open Copilot Chat$$$Ctrl+Alt+I</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_EMnzERd8EfGwG-0oFtDXnQ" selectedElement="_EMnzEhd8EfGwG-0oFtDXnQ" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_EMnzEhd8EfGwG-0oFtDXnQ" containerData="2500" selectedElement="_EMnzExd8EfGwG-0oFtDXnQ">
               <children xsi:type="basic:PartStack" xmi:id="_EMnzExd8EfGwG-0oFtDXnQ" elementId="left" containerData="6000" selectedElement="_EMnzFBd8EfGwG-0oFtDXnQ">
@@ -365,7 +366,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_EESWchd8EfGwG-0oFtDXnQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_5Ip54Bd8EfGDT5vR6ea3PQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.svg" tooltip="Print" command="_DjpvFxd8EfGwG-0oFtDXnQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_CIyHgHHbEfG2ELiq_5FAMQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.svg" tooltip="Print" command="_DjpvFxd8EfGwG-0oFtDXnQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_EESWcxd8EfGwG-0oFtDXnQ" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -373,8 +374,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_EESWdRd8EfGwG-0oFtDXnQ" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_5Iqg8Rd8EfGDT5vR6ea3PQ" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.svg" tooltip="Undo" enabled="false" command="_Djf-oxd8EfGwG-0oFtDXnQ"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_5IrIABd8EfGDT5vR6ea3PQ" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.svg" tooltip="Redo" enabled="false" command="_Djf_Ihd8EfGwG-0oFtDXnQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_CIyHhnHbEfG2ELiq_5FAMQ" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.svg" tooltip="Undo" enabled="false" command="_Djf-oxd8EfGwG-0oFtDXnQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_CIyHh3HbEfG2ELiq_5FAMQ" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.svg" tooltip="Redo" enabled="false" command="_Djf_Ihd8EfGwG-0oFtDXnQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_EESWdhd8EfGwG-0oFtDXnQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -395,7 +396,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_EESWehd8EfGwG-0oFtDXnQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_5IsWIBd8EfGDT5vR6ea3PQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.svg" tooltip="Pin Editor" enabled="false" type="Check" command="_Djpu0Rd8EfGwG-0oFtDXnQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_CI1x4HHbEfG2ELiq_5FAMQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.svg" tooltip="Pin Editor" enabled="false" type="Check" command="_Djpu0Rd8EfGwG-0oFtDXnQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_EESWexd8EfGwG-0oFtDXnQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -437,6 +438,15 @@
     </trimBars>
     <trimBars xmi:id="_DimluRd8EfGwG-0oFtDXnQ" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.platform" side="Right"/>
   </children>
+  <handlers xmi:id="_B12keHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.handler.refreshagentjobs" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs" contributionURI="bundleclass://com.microsoft.copilot.eclipse.ui.jobs/com.microsoft.copilot.eclipse.ui.jobs.handlers.RefreshAgentJobsHandler">
+    <command href="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs/fragment.e4xmi#_RefreshAgentJobsCommand"/>
+  </handlers>
+  <handlers xmi:id="_B12keXHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.handler.collapseall" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs" contributionURI="bundleclass://com.microsoft.copilot.eclipse.ui.jobs/com.microsoft.copilot.eclipse.ui.jobs.handlers.CollapseAllHandler">
+    <command href="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs/fragment.e4xmi#_CollapseAllCommand"/>
+  </handlers>
+  <handlers xmi:id="_B12kenHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.handler.expandall" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs" contributionURI="bundleclass://com.microsoft.copilot.eclipse.ui.jobs/com.microsoft.copilot.eclipse.ui.jobs.handlers.ExpandAllHandler">
+    <command href="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs/fragment.e4xmi#_ExpandAllCommand"/>
+  </handlers>
   <bindingTables xmi:id="_Dimluhd8EfGwG-0oFtDXnQ" contributorURI="platform:/plugin/org.eclipse.platform" bindingContext="_Dimluxd8EfGwG-0oFtDXnQ">
     <bindings xmi:id="_DkQLlBd8EfGwG-0oFtDXnQ" keySequence="CTRL+1" command="_Djf-aRd8EfGwG-0oFtDXnQ"/>
     <bindings xmi:id="_DkSAxRd8EfGwG-0oFtDXnQ" keySequence="CTRL+SHIFT+I" command="_Djf-Shd8EfGwG-0oFtDXnQ"/>
@@ -517,6 +527,10 @@
     <bindings xmi:id="_Dkdm8Rd8EfGwG-0oFtDXnQ" keySequence="CTRL+SHIFT+NUMPAD_DIVIDE" command="_DjpHkhd8EfGwG-0oFtDXnQ"/>
     <bindings xmi:id="_Dke1Dxd8EfGwG-0oFtDXnQ" keySequence="ALT+/" command="_DjpvWhd8EfGwG-0oFtDXnQ"/>
     <bindings xmi:id="_Dke1Exd8EfGwG-0oFtDXnQ" keySequence="SHIFT+CR" command="_DjpvVRd8EfGwG-0oFtDXnQ"/>
+    <bindings xmi:id="_B00CoXHbEfG2ELiq_5FAMQ" keySequence="CTRL+SHIFT+F" command="_B0XWvHHbEfG2ELiq_5FAMQ"/>
+    <bindings xmi:id="_B00CpHHbEfG2ELiq_5FAMQ" keySequence="ALT+CTRL+/" command="_B0XWzHHbEfG2ELiq_5FAMQ"/>
+    <bindings xmi:id="_B0_o0XHbEfG2ELiq_5FAMQ" keySequence="ESC" command="_B0XWynHbEfG2ELiq_5FAMQ"/>
+    <bindings xmi:id="_B0_o03HbEfG2ELiq_5FAMQ" keySequence="TAB" command="_B0XW2XHbEfG2ELiq_5FAMQ"/>
   </bindingTables>
   <bindingTables xmi:id="_DkQLgRd8EfGwG-0oFtDXnQ" elementId="org.eclipse.mylyn.tasks.ui.views.tasks" bindingContext="_Djy4kxd8EfGwG-0oFtDXnQ">
     <bindings xmi:id="_DkQLghd8EfGwG-0oFtDXnQ" keySequence="CTRL+CR" command="_Djf-kxd8EfGwG-0oFtDXnQ"/>
@@ -697,6 +711,13 @@
     <bindings xmi:id="_DkgDJhd8EfGwG-0oFtDXnQ" keySequence="ALT+SHIFT+D T" command="_Djf9qBd8EfGwG-0oFtDXnQ"/>
     <bindings xmi:id="_DkgDJxd8EfGwG-0oFtDXnQ" keySequence="ALT+SHIFT+D J" command="_DjpuyRd8EfGwG-0oFtDXnQ"/>
     <bindings xmi:id="_DkgDKBd8EfGwG-0oFtDXnQ" keySequence="ALT+SHIFT+D Q" command="_Djf_FBd8EfGwG-0oFtDXnQ"/>
+    <bindings xmi:id="_B00ConHbEfG2ELiq_5FAMQ" keySequence="ALT+CTRL+I" command="_B0XW1XHbEfG2ELiq_5FAMQ">
+      <tags>platform:win32</tags>
+    </bindings>
+    <bindings xmi:id="_B09zoHHbEfG2ELiq_5FAMQ" keySequence="ALT+SHIFT+X G" command="_B0XWuHHbEfG2ELiq_5FAMQ"/>
+    <bindings xmi:id="_B0_o0HHbEfG2ELiq_5FAMQ" keySequence="ALT+SHIFT+X N" command="_B0XWuXHbEfG2ELiq_5FAMQ"/>
+    <bindings xmi:id="_B0_o0nHbEfG2ELiq_5FAMQ" keySequence="ALT+SHIFT+D G" command="_B0XWw3HbEfG2ELiq_5FAMQ"/>
+    <bindings xmi:id="_B0_o1HHbEfG2ELiq_5FAMQ" keySequence="ALT+SHIFT+D N" command="_B0XWt3HbEfG2ELiq_5FAMQ"/>
   </bindingTables>
   <bindingTables xmi:id="_DkQLhhd8EfGwG-0oFtDXnQ" elementId="org.eclipse.jdt.ui.javaEditorScope" bindingContext="_Djy4khd8EfGwG-0oFtDXnQ">
     <bindings xmi:id="_DkQLhxd8EfGwG-0oFtDXnQ" keySequence="CTRL+SHIFT+P" command="_DjpusBd8EfGwG-0oFtDXnQ"/>
@@ -890,6 +911,13 @@
   <bindingTables xmi:id="_EMR00Bd8EfGwG-0oFtDXnQ" bindingContext="_EMRNyhd8EfGwG-0oFtDXnQ"/>
   <bindingTables xmi:id="_EMR00hd8EfGwG-0oFtDXnQ" bindingContext="_EMR00Rd8EfGwG-0oFtDXnQ"/>
   <bindingTables xmi:id="_EMR01Bd8EfGwG-0oFtDXnQ" bindingContext="_EMR00xd8EfGwG-0oFtDXnQ"/>
+  <bindingTables xmi:id="_B0y0gHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.chatViewContext" bindingContext="_B0bBEHHbEfG2ELiq_5FAMQ">
+    <bindings xmi:id="_B00CoHHbEfG2ELiq_5FAMQ" keySequence="CTRL+-" command="_B0XWs3HbEfG2ELiq_5FAMQ"/>
+    <bindings xmi:id="_B00Co3HbEfG2ELiq_5FAMQ" keySequence="CTRL+=" command="_B0XWtnHbEfG2ELiq_5FAMQ"/>
+  </bindingTables>
+  <bindingTables xmi:id="_B09zoXHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.completionAvailableContext" bindingContext="_B0bBEXHbEfG2ELiq_5FAMQ">
+    <bindings xmi:id="_B09zonHbEfG2ELiq_5FAMQ" keySequence="CTRL+ARROW_RIGHT" command="_B0XWyHHbEfG2ELiq_5FAMQ"/>
+  </bindingTables>
   <rootContext xmi:id="_Dimluxd8EfGwG-0oFtDXnQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.platform" name="In Dialogs and Windows" description="Either a dialog or a window is open">
     <children xmi:id="_DimlvBd8EfGwG-0oFtDXnQ" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.platform" name="In Windows" description="A window is open">
       <children xmi:id="_DimlvRd8EfGwG-0oFtDXnQ" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.platform" name="%bindingcontext.name.bindingView"/>
@@ -907,6 +935,7 @@
         </children>
         <children xmi:id="_Djy4mBd8EfGwG-0oFtDXnQ" elementId="org.eclipse.ant.ui.AntEditorScope" name="Editing Ant Buildfiles" description="Editing Ant Buildfiles Context"/>
         <children xmi:id="_Djy4mxd8EfGwG-0oFtDXnQ" elementId="org.eclipse.jdt.ui.propertiesEditorScope" name="Editing Properties Files" description="Editing Properties Files Context"/>
+        <children xmi:id="_B0bBEXHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.completionAvailableContext" name="Completion Available" description="Context when completion is available"/>
       </children>
       <children xmi:id="_Djy4hRd8EfGwG-0oFtDXnQ" elementId="org.eclipse.debug.ui.console" name="In I/O Console" description="In I/O console"/>
       <children xmi:id="_Djy4hhd8EfGwG-0oFtDXnQ" elementId="org.eclipse.terminal.view.ui.TerminalsView" name="In Terminal View" description="Show modified keyboard shortcuts in context menu"/>
@@ -924,6 +953,7 @@
       <children xmi:id="_Djy4nBd8EfGwG-0oFtDXnQ" elementId="org.eclipse.egit.ui.RepositoriesView" name="In Git Repositories View">
         <children xmi:id="_Djy4nRd8EfGwG-0oFtDXnQ" elementId="org.eclipse.egit.ui.RepositoriesView.SingleRepository" name="In Git Repositories View"/>
       </children>
+      <children xmi:id="_B0bBEHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.chatViewContext" name="Chat View Active" description="Context when the Copilot Chat is focused"/>
     </children>
     <children xmi:id="_Dimlvhd8EfGwG-0oFtDXnQ" elementId="org.eclipse.ui.contexts.dialog" contributorURI="platform:/plugin/org.eclipse.platform" name="In Dialogs" description="A dialog is open"/>
   </rootContext>
@@ -1364,6 +1394,40 @@
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.workbench.texteditor"/>
     <tags>View</tags>
     <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_B12kcHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.JobsView" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs" label="%view.jobsView.label" iconURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs/icons/bg_agents.png" tooltip="%view.jobsView.tooltip" category="GitHub Copilot" closeable="true" contributionURI="bundleclass://com.microsoft.copilot.eclipse.ui.jobs/com.microsoft.copilot.eclipse.ui.jobs.views.JobsView">
+    <tags>View</tags>
+    <tags>categoryTag:GitHub Copilot</tags>
+    <toolbar xmi:id="_B12kcXHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.toolbar.0" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs">
+      <children xsi:type="menu:HandledToolItem" xmi:id="_B12kcnHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.handledtoolitem.refreshagentjobs" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs" label="%command.refreshAgentJobs.name" iconURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs/icons/refresh.png" tooltip="%command.refreshAgentJobs.tooltip">
+        <command href="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs/fragment.e4xmi#_RefreshAgentJobsCommand"/>
+      </children>
+      <children xsi:type="menu:HandledToolItem" xmi:id="_B12kc3HbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.handledtoolitem.collapseall" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs" label="%command.collapseAll.name" iconURI="platform:/plugin/org.eclipse.ui/icons/full/elcl16/collapseall.png" tooltip="%command.collapseAll.tooltip">
+        <command href="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs/fragment.e4xmi#_CollapseAllCommand"/>
+      </children>
+      <children xsi:type="menu:HandledToolItem" xmi:id="_B12kdHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.handledtoolitem.expandall" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs" label="%command.expandAll.name" iconURI="platform:/plugin/org.eclipse.ui/icons/full/elcl16/expandall.png" tooltip="%command.expandAll.tooltip">
+        <command href="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs/fragment.e4xmi#_ExpandAllCommand"/>
+      </children>
+    </toolbar>
+  </descriptors>
+  <descriptors xmi:id="_CFnewHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.chat.ChatView" label="Chat" iconURI="platform:/plugin/com.microsoft.copilot.eclipse.ui/icons/github_copilot.png" tooltip="" category="GitHub Copilot" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="com.microsoft.copilot.eclipse.ui.chat.ChatView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="com.microsoft.copilot.eclipse.ui"/>
+    <tags>View</tags>
+    <tags>inject</tags>
+    <tags>categoryTag:GitHub Copilot</tags>
+  </descriptors>
+  <descriptors xmi:id="_CFos4HHbEfG2ELiq_5FAMQ" elementId="org.testng.eclipse.ResultView" label="TestNG" iconURI="platform:/plugin/org.testng.eclipse/icons/full/main16/testng_blur.gif" tooltip="" category="Java" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.testng.eclipse.ui.TestRunnerViewPart"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.testng.eclipse"/>
+    <tags>View</tags>
+    <tags>categoryTag:Java</tags>
+  </descriptors>
+  <descriptors xmi:id="_CFos4XHbEfG2ELiq_5FAMQ" elementId="org.eclipse.unittest.ui.ResultView" label="Test Results" iconURI="platform:/plugin/org.eclipse.unittest.ui/icons/full/eview16/unit.svg" tooltip="" category="Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.unittest.internal.ui.TestRunnerViewPart"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.unittest.ui"/>
+    <tags>View</tags>
+    <tags>categoryTag:Debug</tags>
   </descriptors>
   <trimContributions xmi:id="_2r10UF9tEeO-yojH_y4TJA" elementId="org.eclipse.ui.ide.application.trimcontribution.QuickAccess" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" toBeRendered="false" parentId="org.eclipse.ui.main.toolbar" positionInParent="last">
     <children xsi:type="menu:ToolControl" xmi:id="_76uUAF9tEeO-yojH_y4TJA" elementId="Spacer Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
@@ -2386,6 +2450,64 @@
   <commands xmi:id="_EBQQkRd8EfGwG-0oFtDXnQ" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.tasks.ui.open.repositories.view" commandName="Show Task Repositories View" description="Show Task Repositories View" category="_DjWMtxd8EfGwG-0oFtDXnQ"/>
   <commands xmi:id="_EBQQkhd8EfGwG-0oFtDXnQ" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.doc.legend.show.action" commandName="Show UI Legend" description="Show Tasks UI Legend" category="_DjWMtxd8EfGwG-0oFtDXnQ"/>
   <commands xmi:id="_EBQQkxd8EfGwG-0oFtDXnQ" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.context.ui.actions.tasklist.focus" commandName="Focus on Workweek" description="Focus on Workweek" category="_DjWMtxd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWsHHbEfG2ELiq_5FAMQ" elementId="org.testng.eclipse.createClassAction" commandName="Create TestNG class" description="Create a TestNG class to test this class" category="_DjWMqBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWsXHbEfG2ELiq_5FAMQ" elementId="io.cucumber.eclipse.editor.builder.removeBuilder" commandName="Disable Cucumber Builder" category="_B0R3IXHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWsnHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.generateCommitMessage.toolBar" commandName="Generate Commit Message with Copilot" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWs3HbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.decreaseChatFontSize" commandName="Decrease Chat Font Size" description="Decrease the font size in Chat" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWtHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.showStatusBarMenu" commandName="Show Copilot Status Menu" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWtXHbEfG2ELiq_5FAMQ" elementId="io.cucumber.eclipse.editor.builder.addBuilder" commandName="Enable Cucumber Builder" category="_B0R3IXHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWtnHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.increaseChatFontSize" commandName="Increase Chat Font Size" description="Increase the font size in Chat" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWt3HbEfG2ELiq_5FAMQ" elementId="org.testng.eclipse.shortcut.debug" commandName="Debug TestNG Test" description="Debug TestNG Test" category="_DjWMrBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWuHHbEfG2ELiq_5FAMQ" elementId="org.testng.eclipse.shortcut.testngSuite.run" commandName="Run TestNG Suite" description="Run TestNG Suite" category="_DjWMrBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWuXHbEfG2ELiq_5FAMQ" elementId="org.testng.eclipse.shortcut.run" commandName="Run TestNG Test" description="Run TestNG Test" category="_DjWMrBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWunHbEfG2ELiq_5FAMQ" elementId="org.eclipse.unittest.ui.gotoTest" commandName="Referring Tests" description="Referring Tests" category="_DjWMqxd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWu3HbEfG2ELiq_5FAMQ" elementId="org.eclipse.unittest.ui.history" commandName="Test Sessions History" description="Test Sessions History" category="_DjWMtxd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWvHHbEfG2ELiq_5FAMQ" elementId="io.cucumber.eclipse.editor.format" commandName="Format Feature File" category="_B0R3IXHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWvXHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.disabledDoNothing" commandName="Menu Placeholder Disabled" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWvnHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.signOut" commandName="Sign Out from GitHub" category="_DjWMtxd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWv3HbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.showWhatIsNew" commandName="Show What's New" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWwHHbEfG2ELiq_5FAMQ" elementId="org.testng.eclipse.shortcut.rerunFailed" commandName="Rerun Failed TestNG Test" description="Rerun the failed TestNG Test" category="_DjWMrBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWwXHbEfG2ELiq_5FAMQ" elementId="org.eclipse.unittest.ui.UnitTestShortcut.rerunFailedCases" commandName="Rerun Unit Test - Failures only" description="Rerun Unit Test - Failures only" category="_DjWMrBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWwnHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.autoShowCompletions" commandName="Enable/Disable Auto Show Completions" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWw3HbEfG2ELiq_5FAMQ" elementId="org.testng.eclipse.shortcut.testngSuite.debug" commandName="Debug TestNG Suite" description="Debug TestNG Suite" category="_DjWMrBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWxHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.addToReferences" commandName="Add File to Chat" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWxXHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.signIn" commandName="Sign in to GitHub Copilot" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWxnHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.enabledDoNothing" commandName="Menu Placeholder Enabled" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWx3HbEfG2ELiq_5FAMQ" elementId="org.testng.eclipse.shortcut.rerunLast" commandName="Rerun TestNG Test" description="Rerun the last TestNG Test" category="_DjWMrBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWyHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.acceptNextWord" commandName="Accept Next Word" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWyXHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openGitHubJobs" commandName="Open GitHub Copilot Jobs" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWynHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.discardSuggestion" commandName="Discard Suggestion" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWy3HbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.showChatHistory" commandName="Show Chat History" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWzHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.triggerInlineSuggestion" commandName="Trigger Inline Suggestion" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XWzXHbEfG2ELiq_5FAMQ" elementId="org.eclipse.unittest.ui.UnitTestShortcut.rerunLast" commandName="Rerun Unit Test" description="Rerun Unit Test" category="_DjWMrBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XWznHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openUrl" commandName="Open URL" category="_B0VhgHHbEfG2ELiq_5FAMQ">
+    <parameters xmi:id="_B0XWz3HbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openUrl.url" name="URL"/>
+  </commands>
+  <commands xmi:id="_B0XW0HHbEfG2ELiq_5FAMQ" elementId="org.testng.eclipse.convertToYamlAction" commandName="Convert to YAML" description="Convert the TestNG Suite XML file to YAML" category="_DjWMtxd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XW0XHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openEditKeyboardShortcuts" commandName="Edit Keyboard Shortcuts..." category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XW0nHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.configureCopilotSettings" commandName="Activate GitHub Copilot Account... " category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XW03HbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openQuickStart" commandName="Open Quick Start" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XW1HHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.upgradeCopilotPlan" commandName="Upgrade Copilot Plan" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XW1XHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openChatView" commandName="Open Copilot Chat" category="_B0VhgHHbEfG2ELiq_5FAMQ">
+    <parameters xmi:id="_B0XW1nHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openChatView.inputValue" name="Default input value for the opened chat view"/>
+    <parameters xmi:id="_B0XW13HbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openChatView.autoSend" name="Open Chat View with Auto Send"/>
+  </commands>
+  <commands xmi:id="_B0XW2HHbEfG2ELiq_5FAMQ" elementId="org.eclipse.unittest.ui.UnitTestShortcut.run" commandName="Run Unit Test" description="Run Unit Test" category="_DjWMrBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XW2XHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.acceptFullSuggestion" commandName="Accept Suggestion" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XW2nHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.configureTools" commandName="Configure Tools..." description="Configure tools for the current agent file" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XW23HbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openMcpRegistry" commandName="Open MCP Registry" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XW3HHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.generateCommitMessage" commandName="Generate Commit Message with Copilot" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B0XW3XHbEfG2ELiq_5FAMQ" elementId="org.eclipse.unittest.ui.UnitTestShortcut.debug" commandName="Debug Unit Test" description="Debug Unit Test" category="_DjWMrBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XW3nHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openPreferences" commandName="Edit Preferences..." category="_B0VhgHHbEfG2ELiq_5FAMQ">
+    <parameters xmi:id="_B0XW33HbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openPreferences.activePageId" name="Page Name"/>
+    <parameters xmi:id="_B0XW4HHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.openPreferences.pageIds" name="Page Name"/>
+  </commands>
+  <commands xmi:id="_B0XW4XHbEfG2ELiq_5FAMQ" elementId="org.testng.eclipse.convertAction" commandName="Convert to TestNG" description="Convert the selection to TestNG" category="_DjWMqBd8EfGwG-0oFtDXnQ"/>
+  <commands xmi:id="_B0XW4nHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.commands.newConversation" commandName="New Conversation" category="_B0VhgHHbEfG2ELiq_5FAMQ"/>
+  <commands xmi:id="_B12kdXHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.command.refreshagentjobs" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs" commandName="%command.refreshAgentJobs.name"/>
+  <commands xmi:id="_B12kdnHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.command.collapseall" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs" commandName="%command.collapseAll.name"/>
+  <commands xmi:id="_B12kd3HbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.jobs.command.expandall" contributorURI="platform:/plugin/com.microsoft.copilot.eclipse.ui.jobs" commandName="%command.expandAll.name"/>
+  <commands xmi:id="_CEut8HHbEfG2ELiq_5FAMQ" elementId="AUTOGEN:::Bug575970.rulerActions/Bug575970.doubleClickBreakpointAction" commandName="Not Used" category="_DjWMtxd8EfGwG-0oFtDXnQ"/>
   <addons xmi:id="_Dimlvxd8EfGwG-0oFtDXnQ" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_DimlwBd8EfGwG-0oFtDXnQ" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_DimlwRd8EfGwG-0oFtDXnQ" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -2397,7 +2519,7 @@
   <addons xmi:id="_Dimlxxd8EfGwG-0oFtDXnQ" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_DimlyBd8EfGwG-0oFtDXnQ" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_Di45kBd8EfGwG-0oFtDXnQ" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_B1f_IHHbEfG2ELiq_5FAMQ" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_DjWMkBd8EfGwG-0oFtDXnQ" elementId="org.eclipse.team.ui.category.team" name="Version control (Team)" description="Actions that apply when working with a version control system"/>
   <categories xmi:id="_DjWMkRd8EfGwG-0oFtDXnQ" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
@@ -2439,4 +2561,6 @@
   <categories xmi:id="_DjWMtRd8EfGwG-0oFtDXnQ" elementId="org.eclipse.terminal.view.ui.commands.category" name="Terminal Commands"/>
   <categories xmi:id="_DjWMthd8EfGwG-0oFtDXnQ" elementId="org.eclipse.oomph.commands" name="Oomph"/>
   <categories xmi:id="_DjWMtxd8EfGwG-0oFtDXnQ" elementId="org.eclipse.core.commands.categories.autogenerated" name="Uncategorized" description="Commands that were either auto-generated or have no category"/>
+  <categories xmi:id="_B0R3IXHbEfG2ELiq_5FAMQ" elementId="io.cucumber.eclipse.editor.category" name="Cucumber" description="Cucumber Editor Commands"/>
+  <categories xmi:id="_B0VhgHHbEfG2ELiq_5FAMQ" elementId="com.microsoft.copilot.eclipse.ui.githubCopilot" name="GitHub Copilot"/>
 </application:Application>
